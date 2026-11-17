@@ -86,6 +86,8 @@ export function updateTraffic(G, dt) {
   }
   // Keep traffic topped up near the player, but capped: without the cap
   // the top-up spawns two cars a step and the car list grows forever.
+  // Now: at most one top-up spawn per 2 s, and only while fewer than 24
+  // traffic cars exist in total.
   const near = G.cars.filter((c) => c.traffic && !c.dead && Math.hypot(c.x - p.x, c.y - p.y) < 900).length;
   const totalTraffic = G.cars.filter((c) => c.traffic && !c.dead).length;
   G.trafficTimer = (G.trafficTimer ?? 0) - dt;

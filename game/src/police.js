@@ -67,9 +67,9 @@ export function updatePolice(G, dt) {
     // Ram the player's car; bump the player on foot.
     if (dist < 44) {
       if (p.inCar) {
-        // A ram scrape hurts the car (14 hp/s of contact), it does not
-        // detonate it: the old 14*dt*10 was 140 hp/s and exploded every
-        // stolen car within a second of a police touch.
+        // A ram scrape hurts the car at 14 hp/s of contact — it does not
+        // detonate it. (An earlier 14*dt*10 worked out to 140 hp/s and
+        // exploded every stolen car within a second of a police touch.)
         p.inCar.hp -= 14 * dt;
         p.inCar.speed *= 0.92;
         car.speed *= 0.6;

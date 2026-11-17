@@ -1,4 +1,4 @@
-// HARBOR LIGHTS — tuning, palette and world constants. An original open-world
+// Harbor Lights — tuning, palette and world constants. An original open-world
 // crime game set in Solmar Bay, a sun-soaked fictional coastal city.
 // Protagonist: Mara Voss, a getaway driver. Every name, place, vehicle and
 // character here is invented for this game; nothing comes from any
